@@ -5,6 +5,7 @@ const apiURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=
 let seachBox = document.querySelector(".seach-contry");
 const seachBtn = document.querySelector(".seach button");
 const weaderImage = document.querySelector(".weather-image");
+const inputField = document.getElementById("inputField");
 
 async function chackWeader(city){
   // fetch the weader API.
@@ -57,3 +58,10 @@ async function chackWeader(city){
 seachBtn.addEventListener("click", ()=>{
   chackWeader(seachBox.value);
 })
+
+// enter key event
+inputField.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    chackWeader(seachBox.value);
+  }
+});
