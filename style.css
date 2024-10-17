@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto sans', 'Poppins', sans-serif;
+}
+
+body{
+  background-color: #222;
+  color: #f8efeff2;
+}
+
+.weather{
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto 0;
+  background: linear-gradient(230deg, rgb(1, 238, 255) , rgba(36, 50, 37, 0.833));
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.seach{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.seach input{
+  flex: 1;
+  margin-right: 20px;
+  font-size: 20px;
+  height: 42px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding-left: 20px;
+  text-transform:uppercase;
+  transition: background-color .4s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+.seach input::placeholder{
+  font-size: 20px;
+}
+
+.seach button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 2px solid white;
+  background-color: white;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .4s ease-in-out, background-color .4s ease-in-out, border .4s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+.seach button img{
+  width: 35px;
+  object-fit: cover;
+}
+
+
+.weather-display{
+  display: none;
+  opacity: 1;
+  cursor: default;
+  transition: all .5s ease-in-out;
+}
+
+.invalid-input{
+  text-align: left;
+  font-weight: 600;
+  display: none;
+}
+
+.wImage{
+  width: 70%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.weather-image{
+  width: 90%;
+  transition: transform .4s ease-in-out;
+}
+
+.weather-display h1{
+  font-size: 4em;
+  font-weight: 500;
+  margin-top: -19px;
+}
+
+.weather-display h2{
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.wind-and-humidity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.humidity,
+.wind{
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.humidity-show,
+.wind-showe{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.humidity-show img,
+.wind-showe img{
+  width:80px;
+  height: 80px; 
+  transition: transform .4s ease-in-out; 
+}
+
+.humidity-show h3,
+.wind-showe h3{
+  font-size: 3em;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.info{
+  margin-left: 10px;
+}
+
+.value{
+  font-size: 1.5em;
+
+}
+
+/* adding hover efect */
+
+.weather-image:hover{
+  transform: scale(1.2);
+}
+
+.humidity-show img:hover,
+.wind-showe img:hover{
+  transform: scale(1.1);
+}
+
+.seach button:hover{
+  transform: scale(1.05);
+  background-color:rgb(1, 238, 255) ;
+  border: 2px solid black;
+  box-shadow: 0px 3px 4px rgba(0,0,0,0.3);
+}
+
+.seach input:focus{
+  background-color: seashell;
+  box-shadow: 0px 3px 4px rgba(0,0,0,0.3);
+}

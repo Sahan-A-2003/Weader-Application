@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today Weather</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- text Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="weather">
+    <div class="seach">
+      <input type="text" name="weather" class="seach-contry" placeholder="Enter the Cuntry.." required>
+      <button><img src="./images/icons8-search (1).svg" ></button>
+    </div>
+
+    <!-- need to show this error masseg to user how input the worng country name -->
+
+    <div class="invalid-input">
+      <p>Inavalide Country Name</p>
+    </div>
+
+    <!-- this is the main section that showcase the weader information.  -->
+    
+    <div class="weather-display">
+      <div class="wImage">
+        <img src="./images/clear.png"  class="weather-image" alt="clear weather">
+      </div>
+      <h1 class="temp"></h1>
+      <h2 class="Country"></h2>
+      <div class="wind-and-humidity">
+        <div class="humidity">
+          <div class="humidity-show">
+            <img src="./images/humidity.png" alt="humidity presantege">
+          </div>
+          <div class="info">
+            <p class="value" id="Hpresanteg"></p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="wind">
+          <div class="wind-showe">
+            <img src="./images/wind.png" alt="wind speed">
+          </div>
+          <div class="info">
+            <p class="value" id="wSpeed"></p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
